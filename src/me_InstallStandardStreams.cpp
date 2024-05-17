@@ -2,14 +2,16 @@
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-05-09
+  Last mod.: 2024-05-17
 */
 
 #include "me_InstallStandardStreams.h"
 
 #include <Arduino.h> // fdevopen(), FILE, stdin..
 
-#include <me_Types.h> // TSint_2, TChar
+#include <me_BaseTypes.h>
+
+using namespace me_BaseTypes;
 
 // Forwards:
 TSint_2 WriteChar(TChar Char, FILE * File);

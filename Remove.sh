@@ -4,4 +4,4 @@
 arduino-cli lib uninstall me_InstallStandardStreams
 
 # Uninstall dependencies
-arduino-cli lib uninstall me_Types
+arduino-cli lib uninstall me_BaseTypes
