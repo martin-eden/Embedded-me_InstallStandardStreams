@@ -2,7 +2,7 @@
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-05-17
+  Last mod.: 2024-05-23
 */
 
 #include "me_InstallStandardStreams.h"
@@ -64,11 +64,10 @@ void InstallStandardStreams()
 */
 TSint_2 WriteChar(TChar Char, FILE * File __attribute__((unused)))
 {
-  /*
-    Serial.write() always returns 1. According to docs it should
-    return 0. But it works and I won't meddle with code now.
-  */
-  return Serial.write(Char);
+  if (Serial.write(Char) != 1)
+    return 1;
+
+  return 0;
 }
 
 /*
