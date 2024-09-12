@@ -2,7 +2,7 @@
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-05-23
+  Last mod.: 2024-09-12
 */
 
 #include "me_InstallStandardStreams.h"
@@ -10,8 +10,6 @@
 #include <Arduino.h> // fdevopen(), FILE, stdin..
 
 #include <me_BaseTypes.h>
-
-using namespace me_BaseTypes;
 
 // Forwards:
 TSint_2 WriteChar(TChar Char, FILE * File);
