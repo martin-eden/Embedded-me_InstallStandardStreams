@@ -8,7 +8,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-09-12
+  Last mod.: 2024-10-28
 */
 
 #include <me_InstallStandardStreams.h>
@@ -18,21 +18,26 @@ void setup()
 {
   Serial.begin(57600);
 
-  InstallStandardStreams();
-
-  printf("[me_InstallStandardStreams.ino] Hello there!\n");
+  RunTest();
 }
 
 void loop()
 {
-  TUint_4 SleepTime_ms = (5 + random(3)) * 1000;
-  delay(SleepTime_ms);
+}
 
-  TUint_4 SecondsPassed = millis() / 1000;
+// --
 
-  printf("%lu seconds passed\n", SecondsPassed);
+void RunTest()
+{
+  InstallStandardStreams();
+
+  printf("[me_InstallStandardStreams] Just testing output via printf().\n");
+  delay(10);
+  printf("%lu milliseconds passed\n", millis());
+  printf("[me_InstallStandardStreams] Done.\n");
 }
 
 /*
   2024-05-19
+  2024-10-28
 */
