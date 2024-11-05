@@ -2,14 +2,16 @@
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-10-27
+  Last mod.: 2024-11-05
 */
 
 #include "me_InstallStandardStreams.h"
 
 #include <me_BaseTypes.h>
-#include <stdio.h> // fdevopen(), FILE, stdin..
 #include <me_Uart.h>
+
+#include <stdio.h> // fdevopen(), FILE, stdin..
+#include <Arduino.h> // millis()
 
 /*
   Write char
@@ -53,14 +55,18 @@ TSint_2 ReadChar(
     I never used stdlib for input.
   */
 
-  TUint_1 Value;
+  TUint_1 Byte;
 
   const TUint_2 AwaitTime_ms = 15;
+  TUint_4 StopTime = millis() + AwaitTime_ms;
 
-  if (!me_Uart::AwaitByte(&Value, AwaitTime_ms))
-    return _FDEV_ERR;
-
-  return (TSint_2) Value;
+  while (true)
+  {
+    if (me_Uart::ReceiveByte(&Byte))
+      return (TSint_2) Byte;
+    if (millis() > StopTime)
+      return _FDEV_ERR;
+  }
 }
 
 /*
@@ -102,4 +108,5 @@ void InstallStandardStreams()
   2023-11-05
   2024-05-09
   2024-10-27 [~] Switch to [me_Uart]. Goodbye [HardwareSerial]!
+  2024-11-05
 */
