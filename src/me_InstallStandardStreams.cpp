@@ -1,8 +1,8 @@
-// Direct (stdin, stdout, stderr) to Serial
+// Direct (stdin, stdout, stderr) to UART
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-11-05
+  Last mod.: 2024-11-09
 */
 
 #include "me_InstallStandardStreams.h"
@@ -62,7 +62,7 @@ TSint_2 ReadChar(
 
   while (true)
   {
-    if (me_Uart::ReceiveByte(&Byte))
+    if (me_Uart::GetByte(&Byte))
       return (TSint_2) Byte;
     if (millis() > StopTime)
       return _FDEV_ERR;
