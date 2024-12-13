@@ -2,7 +2,7 @@
 
 /*
   Wrapped by: Martin Eden
-  Last mod.: 2024-11-09
+  Last mod.: 2024-12-12
 */
 
 #include "me_InstallStandardStreams.h"
@@ -24,7 +24,7 @@
     value if the character could not be sent to the device.
 */
 TSint_2 WriteChar(
-  TChar Char,
+  char Char,
   FILE * File __attribute__((unused))
 )
 {
