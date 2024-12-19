@@ -8,15 +8,17 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-10-28
+  Last mod.: 2024-12-19
 */
 
 #include <me_InstallStandardStreams.h>
+
 #include <me_BaseTypes.h>
+#include <me_Uart.h>
 
 void setup()
 {
-  Serial.begin(57600);
+  me_Uart::Init(me_Uart::Speed_115k_Bps);
 
   RunTest();
 }
