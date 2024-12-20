@@ -26,14 +26,9 @@ Arduino library to make `printf()` print to Serial.
   * bash
 
 
-## Install
+## Install/remove
 
-Run [Install.sh](Install.sh).
-
-
-## Remove
-
-Run [Remove.sh](Remove.sh).
+Easy way is to clone [GetLibs][GetLibs] repo and run it's code.
 
 
 # See also
@@ -44,6 +39,8 @@ Run [Remove.sh](Remove.sh).
 [Example]: examples/me_InstallStandardStreams/me_InstallStandardStreams.ino
 [Interface]: src/me_InstallStandardStreams.h
 [Implementation]: src/me_InstallStandardStreams.cpp
+
+[GetLibs]: https://github.com/martin-eden/Embedded-Framework-GetLibs
 
 [Embedded]: https://github.com/martin-eden/Embedded_Crafts/tree/master/Parts
 [Repos]: https://github.com/martin-eden/contents
