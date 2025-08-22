@@ -1,8 +1,17 @@
-# What
+## What
 
 (2023-11, 2024-05)
 
 Arduino library to make `printf()` print to Serial.
+
+
+## Archived
+
+(2025)
+
+This repository is considered obsolete.
+
+We don't like design of C standard library.
 
 
 ## Sample output
@@ -29,6 +38,9 @@ Arduino library to make `printf()` print to Serial.
 ## Install/remove
 
 Easy way is to clone [GetLibs][GetLibs] repo and run it's code.
+This will install all my active libs.
+
+For this archived repo, clone it manually.
 
 
 # See also
